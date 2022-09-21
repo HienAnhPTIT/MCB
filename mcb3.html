@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCB3_B19DCDT073</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mcb3.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script lang="javascript" src="mcb3.js"></script>
+    <!-- tét -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- tét -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 bg-light">
+                <h1 class="name-msv">Nguyễn Thái Vượng Hiển-B19DCDT073</h1>
+                <!-- <a href="https://www.facebook.com/profile.php?id=100014363918156" class="btn btn-info"
+                    role="button">Contact me!</a> -->
+                <div class="mb-3 bg-warning"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="A">
+                <div class="name text-white text-center " id="Name">
+                    <h1>Dữ liệu cảm biến</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4  text-white text-center div-nd" id="div-nd">
+                <h2>Nhiệt độ</h2>
+                <p>Dữ liệu nhiệt độ</p>
+                <h3 id="nhiet-do"></h3>
+            </div>
+            <div class="col-md-4  text-white text-center" id="div-da">
+                <h2>Độ ẩm</h2>
+                <p>Dữ liệu độ ẩm</p>
+                <h3 id="do-am"></h3>
+
+            </div>
+            <div class="col-md-4  text-white text-center" id="div-as">
+                <h2>Ánh sáng</h2>
+                <p>Dữ liệu ánh sáng</p>
+                <h3 id="anh-sang"></h3>
+            </div>
+        </div>
+        <div class="row text-white justify-content: text-center ">
+            <div class="col-md-6 bg-white">
+                <div class="Bieu-do">
+                    <!-- <img src="imgs/cantho-average-monthly-rain.png" class="rounded" alt="Biểu đồ nhiệt độ"> -->
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+                    <figure class="highcharts-figure">
+                        <div id="container"></div>
+                        <p class="highcharts-description">
+                            Chart showing a combination of a column and a line chart, using multiple
+                            y-axes. Using multiple axes allows for data within different ranges to
+                            be visualized together.
+                        </p>
+                    </figure>
+                    
+                </div>
+            </div>
+            <div class="col-md-3  " style="padding-top: 8%;" id="div-btna">
+                <div class="btn first text-white button">
+                    <div class="top-btn">
+                        <h2>Công tắc 1</h2>
+                        <div class="x" style="margin-left: -28%;margin-right: 0%">
+                            <button type="button " class="btn btn-success" style="width:60% " id="button-on">ON</button>
+                            <button type="button" class="btn btn-danger active" style="width:60%" id="button-off">OFF</button>
+                        </div>
+                    </div>
+                    <!-- <div class="button-btn">
+                        <h2>Công tắc 2</h2>
+                        <div class="y" style="margin-left: -28%;margin-right: 0%">
+                            <button type="button" class="btn btn-success" style="width:60% ">ON</button>
+                            <button type="button" class="btn btn-danger active" style="width:60% ">OFF</button>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="col-md-3  " style="padding-top: 8%;" id="div-btnb">
+                <div class="btn second text-white text-center">
+                    <div class="top-btn">
+                        <h2>Độ sáng</h2>
+                        <form>
+                            <!-- <label for="customRange">Điều chỉnh nhiệt độ</label> -->
+                            <!-- <i class="material-icons">brightness_4</i> -->
+                            <i class="material-icons">&#xe3a9;</i>
+                            <input type="range" class="custom-range" id="customRange" name="points1">
+                        </form>
+                    </div>
+                    <div class="button-btn" style="padding-top: 9%;">
+                        <h2>Độ sáng tự động</h2>
+                        <form>
+                            <i class="material-icons" style="padding-right: 30px;">&#xe1ab;</i>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                    value="customEx">
+                                <label class="custom-control-label" for="customRadio">ON</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                    value="customEx">
+                                <label class="custom-control-label" for="customRadio2">OFF</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<!-- <script>
+
+    $(document).ready(function () {
+        var x = document.getElementById("nhiet-do").innerHTML =Math.floor(Math.random() * 101);
+        if(x<10){
+            $(".div-nd").css("background-color", "blue");
+        }else if(x>10 && x<50){
+            $(".div-nd").css("background-color", "yellow");
+        }else{
+            $(".div-nd").css("background-color", "red");
+        }
+
+
+
+        $('#nhiet-do').click(function () {
+            $(".div-nd").css("background-color", "red");
+            console.log(x);
+
+        })
+    })
+</script> -->
+
+</html>
